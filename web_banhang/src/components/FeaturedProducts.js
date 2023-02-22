@@ -15,10 +15,7 @@ function FeaturedProducts() {
             <div className="row">
               <div className="col-sm-3">
                 <div className="single-feature">
-                  <img
-                    src="assets/images/features/f1.jpg"
-                    alt="feature image"
-                  />
+                  <img src="../images/features/f1.jpg" alt="feature image" />
                   <div className="single-feature-txt text-center">
                     <p>
                       <i className="fa fa-star" />
@@ -28,7 +25,7 @@ function FeaturedProducts() {
                       <span className="spacial-feature-icon">
                         <i className="fa fa-star" />
                       </span>
-                      <span className="feature-review">(45 review)</span>
+                      <span className="feature-review">(73 review)</span>
                     </p>
                     <h3>
                       <a href="#">designed sofa</a>
@@ -39,10 +36,7 @@ function FeaturedProducts() {
               </div>
               <div className="col-sm-3">
                 <div className="single-feature">
-                  <img
-                    src="assets/images/features/f2.jpg"
-                    alt="feature image"
-                  />
+                  <img src="../images/features/f2.jpg" alt="feature image" />
                   <div className="single-feature-txt text-center">
                     <p>
                       <i className="fa fa-star" />
@@ -52,7 +46,7 @@ function FeaturedProducts() {
                       <span className="spacial-feature-icon">
                         <i className="fa fa-star" />
                       </span>
-                      <span className="feature-review">(45 review)</span>
+                      <span className="feature-review">(38 review)</span>
                     </p>
                     <h3>
                       <a href="#">dinning table </a>
@@ -63,10 +57,7 @@ function FeaturedProducts() {
               </div>
               <div className="col-sm-3">
                 <div className="single-feature">
-                  <img
-                    src="assets/images/features/f3.jpg"
-                    alt="feature image"
-                  />
+                  <img src="../images/features/f3.jpg" alt="feature image" />
                   <div className="single-feature-txt text-center">
                     <p>
                       <i className="fa fa-star" />
@@ -87,10 +78,7 @@ function FeaturedProducts() {
               </div>
               <div className="col-sm-3">
                 <div className="single-feature">
-                  <img
-                    src="assets/images/features/f4.jpg"
-                    alt="feature image"
-                  />
+                  <img src="../images/features/f4.jpg" alt="feature image" />
                   <div className="single-feature-txt text-center">
                     <p>
                       <i className="fa fa-star" />
@@ -100,7 +88,7 @@ function FeaturedProducts() {
                       <span className="spacial-feature-icon">
                         <i className="fa fa-star" />
                       </span>
-                      <span className="feature-review">(45 review)</span>
+                      <span className="feature-review">(29 review)</span>
                     </p>
                     <h3>
                       <a href="#">modern arm chair</a>

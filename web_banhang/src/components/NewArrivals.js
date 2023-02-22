@@ -16,7 +16,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals1.png"
+                      src="../images/collection/arrivals1.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -46,7 +46,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals2.png"
+                      src="../images/collection/arrivals2.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -76,7 +76,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals3.png"
+                      src="../images/collection/arrivals3.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -103,7 +103,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals4.png"
+                      src="../images/collection/arrivals4.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -133,7 +133,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals5.png"
+                      src="../images/collection/arrivals5.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -160,7 +160,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals6.png"
+                      src="../images/collection/arrivals6.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -190,7 +190,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals7.png"
+                      src="../images/collection/arrivals7.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />
@@ -220,7 +220,7 @@ function NewArrivals() {
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
-                      src="assets/images/collection/arrivals8.png"
+                      src="../images/collection/arrivals8.png"
                       alt="new-arrivals images"
                     />
                     <div className="single-new-arrival-bg-overlay" />

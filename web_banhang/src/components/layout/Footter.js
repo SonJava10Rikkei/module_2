@@ -158,10 +158,10 @@ export const Footter = () => {
         <div className="container">
           <div className="hm-footer-copyright text-center">
             <div className="footer-social">
-              <a href="#">
+              <a href="https://www.facebook.com/gutrend.vn/">
                 <i className="fa fa-facebook" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/xion9x/">
                 <i className="fa fa-instagram" />
               </a>
               <a href="#">
@@ -176,7 +176,7 @@ export const Footter = () => {
             </div>
             <p>
               ©copyright. designed and developed by{" "}
-              <a href="https://www.themesine.com/">themesine</a>
+              <a href="https://www.facebook.com/Xion9x">GuTrend</a>
             </p>
             {/*/p*/}
           </div>

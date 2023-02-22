@@ -12,7 +12,7 @@ function PopularProducts() {
                 <div className="single-populer-products">
                   <div className="single-populer-product-img mt40">
                     <img
-                      src="assets/images/populer-products/p1.png"
+                      src="../images/populer-products/p1.png"
                       alt="populer-products images"
                     />
                   </div>
@@ -34,7 +34,7 @@ function PopularProducts() {
                       <div className="col-md-4 col-sm-12">
                         <div className="single-inner-populer-product-img">
                           <img
-                            src="assets/images/populer-products/p2.png"
+                            src="../images/populer-products/p2.png"
                             alt="populer-products images"
                           />
                         </div>
@@ -70,7 +70,7 @@ function PopularProducts() {
                   <div className="single-populer-products">
                     <div className="single-populer-product-img">
                       <img
-                        src="assets/images/populer-products/p3.png"
+                        src="../images/populer-products/p3.png"
                         alt="populer-products images"
                       />
                     </div>

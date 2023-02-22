@@ -1,6 +1,6 @@
-import "../../assets/style/Header.css";
+import { Link, Navigate, NavLink } from "react-router-dom";
 
-import { NavLink } from "react-router-dom";
+import "../../assets/style/Header.css";
 
 function Header() {
   return (
@@ -42,26 +42,32 @@ function Header() {
                 <div className="attr-nav">
                   <ul>
                     <li className="search">
-                      <a href="#">
+                      <NavLink to="/search">
                         <span className="lnr lnr-magnifier" />
-                      </a>
+                      </NavLink>
                     </li>
                     {/*/.search*/}
                     <li className="nav-setting">
-                      <a href="#">
-                        <span className="lnr lnr-cog" />
-                      </a>
+                      <NavLink to="/login">
+                        <span className="lnr lnr-user" />
+                      </NavLink>
+                    </li>
+                    <li className="nav-setting">
+                      <NavLink to="/wishlist">
+                        <span className="lnr lnr-heart" />
+                        <span className="badge badge-bg-1">9</span>
+                      </NavLink>
                     </li>
                     {/*/.search*/}
                     <li className="dropdown">
-                      <a
-                        href="#"
+                      <NavLink
+                        to="/cart"
                         className="dropdown-toggle"
                         data-toggle="dropdown"
                       >
                         <span className="lnr lnr-cart" />
                         <span className="badge badge-bg-1">2</span>
-                      </a>
+                      </NavLink>
                       <ul className="dropdown-menu cart-list s-cate">
                         <li className="single-cart-list">
                           <a href="#" className="photo">
@@ -161,9 +167,9 @@ function Header() {
                   >
                     <i className="fa fa-bars" />
                   </button>
-                  <a className="navbar-brand" href="index.html">
+                  <NavLink className="navbar-brand" to="/">
                     GU<span>TREND</span>.
-                  </a>
+                  </NavLink>
                 </div>
                 {/*/.navbar-header*/}
                 {/* End Header Navigation */}
@@ -177,8 +183,8 @@ function Header() {
                     data-in="fadeInDown"
                     data-out="fadeOutUp"
                   >
-                    <li className=" scroll active">
-                      <a href="#home">home</a>
+                    <li className=" scroll active ">
+                      <NavLink to="/">home</NavLink>
                     </li>
                     <li className="scroll">
                       <a href="#new-arrivals">new arrival</a>

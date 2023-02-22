@@ -511,28 +511,27 @@
     // ------------------------------------------------------------------------------ //
     // Navbar Sticky
     // ------------------------------------------------------------------------------ //
-    // navbarSticky : function(){
-    //     var getNav = $("nav.navbar.bootsnav"),
-    //         navSticky = getNav.hasClass("navbar-sticky");
+    navbarSticky: function () {
+      var getNav = $("nav.navbar.bootsnav"),
+        navSticky = getNav.hasClass("navbar-sticky");
 
-    //     if( navSticky ){
+      if (navSticky) {
+        // Set Height Navigation
+        var getHeight = getNav.height();
+        $(".wrap-sticky").height(getHeight);
 
-    //         // Set Height Navigation
-    //         var getHeight = getNav.height();
-    //         $(".wrap-sticky").height(getHeight);
-
-    //         // Windown on scroll
-    //         var getOffset = $(".wrap-sticky").offset().top;
-    //         $(window).on("scroll", function(){
-    //             var scrollTop = $(window).scrollTop();
-    //             if(scrollTop > getOffset){
-    //                 getNav.addClass("sticked");
-    //             }else {
-    //                 getNav.removeClass("sticked");
-    //             }
-    //         });
-    //     }
-    // },
+        // Windown on scroll
+        var getOffset = $(".wrap-sticky").offset().top;
+        $(window).on("scroll", function () {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > getOffset) {
+            getNav.addClass("sticked");
+          } else {
+            getNav.removeClass("sticked");
+          }
+        });
+      }
+    },
 
     // ------------------------------------------------------------------------------ //
     // Navbar Scrollspy
@@ -614,10 +613,10 @@
 
   // Reset on resize
   $(window).on("resize", function () {
-    // bootsnav.hoverDropdown();
-    // setTimeout(function(){
-    //     bootsnav.navbarSticky();
-    // }, 500);
+    bootsnav.hoverDropdown();
+    setTimeout(function () {
+      bootsnav.navbarSticky();
+    }, 500);
 
     // Toggle Bars
     $(".navbar-toggle").each(function () {

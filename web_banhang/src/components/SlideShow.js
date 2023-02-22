@@ -1,4 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Carousel } from "antd";
+const contentStyle = {
+  height: "160px",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
+};
 
 function SlideShow() {
   return (
@@ -46,7 +54,7 @@ function SlideShow() {
                     <div className="single-welcome-hero">
                       <div className="welcome-hero-img">
                         <img
-                          src="assets/images/slider/slider1.png"
+                          src="../images/slider/slider2.png"
                           alt="slider image"
                         />
                       </div>
@@ -104,7 +112,7 @@ function SlideShow() {
                     <div className="single-welcome-hero">
                       <div className="welcome-hero-img">
                         <img
-                          src="assets/images/slider/slider2.png"
+                          src="../images/slider/slider2.png"
                           alt="slider image"
                         />
                       </div>
@@ -162,7 +170,7 @@ function SlideShow() {
                     <div className="single-welcome-hero">
                       <div className="welcome-hero-img">
                         <img
-                          src="assets/images/slider/slider3.png"
+                          src="../images/slider/slider3.png"
                           alt="slider image"
                         />
                       </div>
@@ -187,4 +195,4 @@ function SlideShow() {
   );
 }
 
-export default SlideShow
+export default SlideShow;

@@ -15,7 +15,7 @@ function Blog() {
               <div className="col-sm-4">
                 <div className="single-blog">
                   <div className="single-blog-img">
-                    <img src="assets/images/blog/b1.jpg" alt="blog image" />
+                    <img src="../images/blog/b1.jpg" alt="blog image" />
                     <div className="single-blog-img-overlay" />
                   </div>
                   <div className="single-blog-txt">
@@ -36,7 +36,7 @@ function Blog() {
               <div className="col-sm-4">
                 <div className="single-blog">
                   <div className="single-blog-img">
-                    <img src="assets/images/blog/b2.jpg" alt="blog image" />
+                    <img src="../images/blog/b2.jpg" alt="blog image" />
                     <div className="single-blog-img-overlay" />
                   </div>
                   <div className="single-blog-txt">
@@ -57,7 +57,7 @@ function Blog() {
               <div className="col-sm-4">
                 <div className="single-blog">
                   <div className="single-blog-img">
-                    <img src="assets/images/blog/b3.jpg" alt="blog image" />
+                    <img src="../images/blog/b3.jpg" alt="blog image" />
                     <div className="single-blog-img-overlay" />
                   </div>
                   <div className="single-blog-txt">
