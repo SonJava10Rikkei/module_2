@@ -1,0 +1,44 @@
+{
+    "user":[
+        {
+            "id":1,
+            "name":"Son",
+            "address":"My Dinh",
+            "phone":"099",
+            "email": "son@gmail.com",
+            "password": "123456abc"
+        },
+        {
+            "id":2,
+            "name":"Long",
+             "address":"My Dinh",
+            "phone":"099",
+            "email": "Long@gmail.com",
+            "password": "123456abc" 
+        },
+        {
+            "id":3,
+            "name":"Van",
+             "address":"My Dinh",
+            "phone":"099",
+            "email": "Van@gmail.com",
+            "password": "123456abc" 
+        },
+        {
+            "id":4,
+            "name":"Duong",
+             "address":"My Dinh",
+            "phone":"099",
+            "email": "Duong@gmail.com",
+            "password": "123456abc"
+        }
+
+    ],
+    "products":[
+        {
+            "id":2,
+            "name_product": "Ban Tron"
+
+        }
+    ]
+}
