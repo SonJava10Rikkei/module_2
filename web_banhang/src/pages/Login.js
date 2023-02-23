@@ -1,7 +1,11 @@
 import { Button, Checkbox, Form, Input, Select } from "antd";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import "../assets/style/Login.scss";
+import { getUser } from "../services/userService";
+
+import "../assets/style/LoginRegister.scss";
 
 const formItemLayout = {
   labelCol: {
@@ -35,13 +39,41 @@ const tailFormItemLayout = {
 };
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [err, setErr] = useState();
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    getUser()
+      .then((res) => {
+        const result = res.data.find((e) => {
+          return e.email === email;
+        });
+        if (!result) {
+          setErr("Tài khoản không tồn tại");
+        } else {
+          if (result.password !== password) {
+            setErr("Mật khẩu không chính xác");
+          } else {
+            localStorage.setItem("user", JSON.stringify(email));
+            navigate("/");
+          }
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div className="form_user">
+      <p>{err}</p>
       <Form
         {...formItemLayout}
         form={form}
@@ -57,6 +89,7 @@ const Login = () => {
         scrollToFirstError
       >
         <p className="form_text">Log In</p>
+
         <Form.Item
           name="email"
           label="E-mail"
@@ -71,7 +104,11 @@ const Login = () => {
             },
           ]}
         >
-          <Input />
+          <Input
+            type="text"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </Form.Item>
 
         <Form.Item
@@ -85,7 +122,11 @@ const Login = () => {
           ]}
           hasFeedback
         >
-          <Input.Password />
+          <Input.Password
+            type="text"
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </Form.Item>
 
         <Form.Item
@@ -106,15 +147,12 @@ const Login = () => {
           </Checkbox>
         </Form.Item>
         <Form.Item {...tailFormItemLayout}>
-          <Button className="login_btn" type="primary" htmlType="submit">
+          <Button className="login_btn" type="primary" onClick={handleSubmit}>
             Login
           </Button>
-          {/* <Button className="register_btn" type="primary" htmlType="submit">
-            Register
-          </Button> */}
           <p>
             {" "}
-            Do not have an account? Go to
+            Do not have an account?
             <NavLink to="/register">Register</NavLink>
           </p>
         </Form.Item>

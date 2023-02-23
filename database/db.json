@@ -1,44 +1,88 @@
 {
-    "user":[
-        {
-            "id":1,
-            "name":"Son",
-            "address":"My Dinh",
-            "phone":"099",
-            "email": "son@gmail.com",
-            "password": "123456abc"
-        },
-        {
-            "id":2,
-            "name":"Long",
-             "address":"My Dinh",
-            "phone":"099",
-            "email": "Long@gmail.com",
-            "password": "123456abc" 
-        },
-        {
-            "id":3,
-            "name":"Van",
-             "address":"My Dinh",
-            "phone":"099",
-            "email": "Van@gmail.com",
-            "password": "123456abc" 
-        },
-        {
-            "id":4,
-            "name":"Duong",
-             "address":"My Dinh",
-            "phone":"099",
-            "email": "Duong@gmail.com",
-            "password": "123456abc"
-        }
-
-    ],
-    "products":[
-        {
-            "id":2,
-            "name_product": "Ban Tron"
-
-        }
-    ]
+  "user": [
+    {
+      "id": 2,
+      "name": "Long123",
+      "address": "My Dinh",
+      "phone": "099",
+      "email": "Long@gmail.com",
+      "password": "123456abc"
+    },
+    {
+      "id": 4,
+      "name": "Duong",
+      "address": "My Dinh",
+      "phone": "099",
+      "email": "Duong@gmail.com",
+      "password": "123456abc"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name_product": "Wooden Chair",
+      "price": 80,
+      "src": "arrivals1"
+    },
+    {
+      "id": 2,
+      "name_product": "Single Armchair",
+      "price": 80,
+      "src": "arrivals2"
+    },
+    {
+      "id": 3,
+      "name_product": "Wooden Armchair",
+      "price": 40,
+      "src": "arrivals3"
+    },
+    {
+      "id": 4,
+      "name_product": "Stylish Chair",
+      "price": 100,
+      "src": "arrivals4"
+    },
+    {
+      "id": 5,
+      "name_product": "Modern Chair",
+      "price": 120,
+      "src": "arrivals5"
+    },
+    {
+      "id": 6,
+      "name_product": "Modern Chair",
+      "price": 140,
+      "src": "arrivals6"
+    },
+    {
+      "id": 7,
+      "name_product": "Modern Chair",
+      "price": 90,
+      "src": "arrivals7"
+    },
+    {
+      "id": 8,
+      "name_product": "Modern Chair",
+      "price": 150,
+      "src": "arrivals8"
+    },
+    {
+      "name_product": "abc",
+      "price": "13",
+      "src": "b2",
+      "id": 9
+    },
+    {
+      "name_product": "aaha",
+      "price": "12",
+      "src": "b2",
+      "id": 10
+    },
+    {
+      "name_product": "123",
+      "price": "123",
+      "src": "b1",
+      "id": 11
+    }
+  ]
 }

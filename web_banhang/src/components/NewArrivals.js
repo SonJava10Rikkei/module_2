@@ -1,6 +1,7 @@
 import React from "react";
 
 function NewArrivals() {
+  
   return (
     <>
       {/*new-arrivals start */}
@@ -37,12 +38,13 @@ function NewArrivals() {
                     </div>
                   </div>
                   <h4>
-                    <a href="#">wooden chair</a>
+                    <a href="">wooden chair</a>
                   </h4>
                   <p className="arrival-product-price">$65.00</p>
                 </div>
               </div>
-              <div className="col-md-3 col-sm-4">
+
+              {/* <div className="col-md-3 col-sm-4">
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
@@ -242,7 +244,7 @@ function NewArrivals() {
                   </h4>
                   <p className="arrival-product-price">$140.00</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

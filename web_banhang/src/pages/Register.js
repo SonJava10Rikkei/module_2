@@ -1,7 +1,10 @@
 import { Button, Checkbox, Form, Input, Select } from "antd";
 import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import "../assets/style/Login.scss";
+import "../assets/style/LoginRegister.scss";
+import { getUser, postUser } from "../services/userService";
 
 const formItemLayout = {
   labelCol: {
@@ -35,11 +38,32 @@ const tailFormItemLayout = {
 };
 
 const Register = () => {
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [listUser, setListUser] = useState([]);
+  useEffect(() => {
+    getUser().then((res) => {
+      setListUser(res.data);
+    });
+  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const info = { email: email, password: password };
+    const checkUser = listUser.find((e) => e.email == email);
+    if (checkUser) {
+      console.log("Email da ton tai");
+    } else {
+      postUser(info).then(() => {
+        navigate("/login");
+      });
+    }
+  };
   return (
     <div className="form_user">
       <Form
@@ -57,6 +81,7 @@ const Register = () => {
         scrollToFirstError
       >
         <p className="form_text">Register</p>
+
         <Form.Item
           name="email"
           label="E-mail"
@@ -71,7 +96,11 @@ const Register = () => {
             },
           ]}
         >
-          <Input />
+          <Input
+            type="text"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </Form.Item>
 
         <Form.Item
@@ -85,7 +114,11 @@ const Register = () => {
           ]}
           hasFeedback
         >
-          <Input.Password />
+          <Input.Password
+            type="text"
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </Form.Item>
 
         <Form.Item
@@ -130,12 +163,16 @@ const Register = () => {
           </Checkbox>
         </Form.Item>
         <Form.Item {...tailFormItemLayout}>
-          <Button className="register_btn" type="primary" htmlType="submit">
+          <Button
+            className="register_btn"
+            type="primary"
+            onClick={handleSubmit}
+          >
             Register
           </Button>
           <p>
             {" "}
-            Do you already have an account? Go to
+            Already have an account? Go to
             <NavLink to="/login">Login</NavLink>
           </p>
         </Form.Item>

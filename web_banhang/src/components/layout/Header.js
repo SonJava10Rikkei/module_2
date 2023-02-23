@@ -1,8 +1,29 @@
-import { Link, Navigate, NavLink } from "react-router-dom";
+import {  useState } from "react";
+import {  Navigate, NavLink } from "react-router-dom";
 
 import "../../assets/style/Header.css";
+import { getUser } from "../../services/userService";
 
 function Header() {
+  const [check, setCheck] = useState("");
+  const user = JSON.parse(localStorage.getItem("user"));
+  let element = "";
+  const logOut = () => {
+    localStorage.removeItem("user");
+    setCheck("LOng");
+  };
+  if (user) {
+    element = <button onClick={logOut}>Log Out</button>;
+  } else {
+    element = (
+      <li className="nav-setting">
+        <NavLink to="/login">
+          <span className="lnr lnr-user" />
+        </NavLink>
+      </li>
+    );
+  }
+
   return (
     <div className="header_top">
       {" "}
@@ -47,17 +68,13 @@ function Header() {
                       </NavLink>
                     </li>
                     {/*/.search*/}
-                    <li className="nav-setting">
-                      <NavLink to="/login">
-                        <span className="lnr lnr-user" />
-                      </NavLink>
-                    </li>
-                    <li className="nav-setting">
+                    {element}
+                    {/* <li className="nav-setting">
                       <NavLink to="/wishlist">
                         <span className="lnr lnr-heart" />
                         <span className="badge badge-bg-1">9</span>
                       </NavLink>
-                    </li>
+                    </li> */}
                     {/*/.search*/}
                     <li className="dropdown">
                       <NavLink
