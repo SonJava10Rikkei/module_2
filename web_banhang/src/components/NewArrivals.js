@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getProduct } from "../services/productService";
+import { images } from "../assets/images/imageList";
 
 function NewArrivals() {
-  
+  const [arrProduct, setArrProduct] = useState([]);
+  useEffect(() => {
+    listProduct();
+  }, []);
+
+  function listProduct() {
+    getProduct()
+      .then((res) => setArrProduct(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  let element = arrProduct.map((data, index) => {
+    let imgUrl = images[data.src];
+    return (
+      <div key={data.id} className="col-md-3 col-sm-4">
+        {/* {index + 1} */}
+        <div className="single-new-arrival">
+          <div className="single-new-arrival-bg">
+            <img src={imgUrl} alt="new-arrivals images" />
+            <div className="single-new-arrival-bg-overlay" />
+            <div className="sale bg-12">
+              {/* <p>sale</p> */}
+            </div>
+            <div className="new-arrival-cart">
+              <p>
+                <span className="lnr lnr-cart" />
+                <a href="#">
+                  add <span>to </span> cart
+                </a>
+              </p>
+              <p className="arrival-review pull-right">
+                <span className="lnr lnr-heart" />
+                <span className="lnr lnr-frame-expand" />
+              </p>
+            </div>
+          </div>
+          <h4>
+            <a href="">{data.name_product}</a>
+          </h4>
+          <p className="arrival-product-price">${data.price}</p>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <>
       {/*new-arrivals start */}
@@ -13,7 +59,7 @@ function NewArrivals() {
           {/*/.section-header*/}
           <div className="new-arrivals-content">
             <div className="row">
-              <div className="col-md-3 col-sm-4">
+              {/* <div className="col-md-3 col-sm-4">
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">
                     <img
@@ -42,8 +88,8 @@ function NewArrivals() {
                   </h4>
                   <p className="arrival-product-price">$65.00</p>
                 </div>
-              </div>
-
+              </div> */}
+              {element}
               {/* <div className="col-md-3 col-sm-4">
                 <div className="single-new-arrival">
                   <div className="single-new-arrival-bg">

@@ -8,6 +8,7 @@ import { LayoutAdmin } from "./pages/Admin/LayoutAdmin";
 
 import { Home } from "./pages/Home";
 import Login from "./pages/Login";
+import MyCart from "./pages/MyCart";
 import Register from "./pages/Register";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/mycart" element={<MyCart />} />
         </Route>
         <Route>
           <Route path="/admin" element={<LayoutAdmin />}>

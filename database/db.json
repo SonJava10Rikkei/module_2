@@ -1,20 +1,25 @@
 {
   "user": [
     {
-      "id": 2,
-      "name": "Long123",
-      "address": "My Dinh",
-      "phone": "099",
-      "email": "Long@gmail.com",
-      "password": "123456abc"
-    },
-    {
       "id": 4,
       "name": "Duong",
       "address": "My Dinh",
       "phone": "099",
       "email": "Duong@gmail.com",
       "password": "123456abc"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 6,
+      "name": "Admin",
+      "address": "thôn 1 - xã Cộng Hòa - huyện Quốc Oai - Tp. Hà Nội, Quốc Oai",
+      "phone": "0399363868"
+    },
+    {
+      "email": "gutrend.top@gmail.com",
+      "password": "123",
+      "id": 7
     }
   ],
   "products": [

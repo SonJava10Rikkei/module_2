@@ -65,6 +65,7 @@ const Login = () => {
           } else {
             localStorage.setItem("user", JSON.stringify(email));
             navigate("/");
+            window.location.reload();
           }
         }
       })

@@ -1,26 +1,57 @@
-import {  useState } from "react";
-import {  Navigate, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import Tippy from "@tippyjs/react/headless";
+import "tippy.js/dist/tippy.css"; // optional
 
 import "../../assets/style/Header.css";
 import { getUser } from "../../services/userService";
+import { Button } from "antd";
 
 function Header() {
+  const [visible, setVisible] = useState(true);
+  const show = () => setVisible(true);
+  const hide = () => setVisible(false);
+
   const [check, setCheck] = useState("");
   const user = JSON.parse(localStorage.getItem("user"));
   let element = "";
   const logOut = () => {
     localStorage.removeItem("user");
-    setCheck("LOng");
+    setCheck("Son");
   };
   if (user) {
-    element = <button onClick={logOut}>Log Out</button>;
+    element = (
+      <>
+        <Tippy
+          interactive
+          placement="right"
+          render={(attrs) => (
+            <a className="box" tabIndex="-1" {...attrs}>
+              <button onClick={logOut}>Log Out</button>
+            </a>
+          )}
+        >
+          <li className="nav-setting">
+            <NavLink>
+              <span className="lnr lnr-heart" />
+              <span className="badge badge-bg-1">0</span>
+            </NavLink>
+          </li>
+        </Tippy>
+      </>
+    );
   } else {
     element = (
-      <li className="nav-setting">
-        <NavLink to="/login">
-          <span className="lnr lnr-user" />
-        </NavLink>
-      </li>
+      <>
+        <li className="nav-setting">
+          <NavLink to="/login">
+            <Button type="dashed" danger>
+              <span className="lnr lnr-user" />
+              Login
+            </Button>
+          </NavLink>
+        </li>
+      </>
     );
   }
 
@@ -68,17 +99,16 @@ function Header() {
                       </NavLink>
                     </li>
                     {/*/.search*/}
-                    {element}
                     {/* <li className="nav-setting">
                       <NavLink to="/wishlist">
-                        <span className="lnr lnr-heart" />
-                        <span className="badge badge-bg-1">9</span>
+                      <span className="lnr lnr-heart" />
+                      <span className="badge badge-bg-1">9</span>
                       </NavLink>
                     </li> */}
                     {/*/.search*/}
                     <li className="dropdown">
                       <NavLink
-                        to="/cart"
+                        to="/mycart"
                         className="dropdown-toggle"
                         data-toggle="dropdown"
                       >
@@ -170,6 +200,7 @@ function Header() {
                       </ul>
                     </li>
                     {/*/.dropdown*/}
+                    {element}
                   </ul>
                 </div>
                 {/*/.attr-nav*/}
